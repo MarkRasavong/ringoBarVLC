@@ -1,6 +1,11 @@
+import styled from "styled-components";
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
+
+const Title = styled.h1`
+  color: red;
+`;
 
 const Home: NextPage = () => {
   return (
@@ -19,7 +24,8 @@ const Home: NextPage = () => {
       </nav>
 
       <main>
-        <h1>Home Page</h1>
+      <p>hello</p>
+      <Title>Title</Title>
       </main>
 
       <footer>
