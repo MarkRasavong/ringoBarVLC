@@ -1,11 +1,7 @@
-import styled from "styled-components";
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
+import Navbar from "../components/Navbar/Navbar";
 
-const Title = styled.h1`
-  color: red;
-`;
 
 const Home: NextPage = () => {
   return (
@@ -17,20 +13,7 @@ const Home: NextPage = () => {
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
 
-      <nav>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-      </nav>
-
-      <main>
-      <p>hello</p>
-      <Title>Title</Title>
-      </main>
-
-      <footer>
-        <p>Footer</p>
-      </footer>
+      <Navbar />
     </div>
   )
 }
