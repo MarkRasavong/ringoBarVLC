@@ -5,11 +5,13 @@ const GlobalStyles = createGlobalStyle`
   *::after, 
   *::before {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
   };
 
   html, body {
-    padding: 0;
-    margin: 0;
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -17,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     font-family: "Oleo Script", cursive;
-  }
+  };
 
   a {
     color: inherit;
