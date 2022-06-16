@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { MobileMenuButton, NavbarContainer, NavbarLogo, NavLinks, SocialNavLinks } from './Navbar.styled';
+import { MobileMenuButton, NavbarContainer, NavbarLogo, NavLinks, SocialMobileNavLinks, SocialNavLinks } from './Navbar.styled';
 import { BsInstagram } from 'react-icons/bs';
 import{ MdMenu, MdOutlineFacebook, MdPhoneInTalk, MdOutlineClose } from 'react-icons/md'
 import { useTheme } from 'styled-components';
@@ -49,13 +49,25 @@ const Navbar = () => {
       </NavbarLogo>
       <NavLinks style={{ left: displayMobileMenu ? '0%' : '-100%' }}>
         {pages.map(({title, link}) => (
-            <li 
+            <li
             key={`NavLink_${title}`}>
               <Link href={link} passHref>
                 <a>{title}</a>
               </Link>
             </li>
+        ))
+        }
+        <SocialMobileNavLinks>
+        {socialMedia.map(({key, icon, link}) => (
+          <button key={`NavSocial_${key}`}>
+            <Link href={link} passHref>
+              <a target="_blank" rel="noopener noreferrer">
+              {icon}
+              </a>  
+            </Link>
+          </button>
         ))}
+      </SocialMobileNavLinks>
       </NavLinks>
       <SocialNavLinks>
         {socialMedia.map(({key, icon, link}) => (
