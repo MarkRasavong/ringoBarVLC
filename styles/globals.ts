@@ -11,6 +11,10 @@ const GlobalStyles = createGlobalStyle`
     list-style: none;
   };
 
+  main {
+    padding-top: 4em;
+  };
+  
   html, body {
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
