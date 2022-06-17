@@ -25,4 +25,8 @@ export const ButtonLrg = styled.button`
 	:nth-child(n + 1) {
 		margin-top: 1em;
 	}
+
+	@media (min-width: 901px) {
+		width: 20%;
+	}
 `

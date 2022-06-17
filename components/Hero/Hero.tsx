@@ -13,22 +13,28 @@ const Hero = () => {
       <div className='heroImageWrpr'>
         <Image src={ringoBarLogo} alt='Ringo Bar Logo in Valencia'/>
       </div>
-      <ButtonLrg>
-        <div className='icnWrpr'>
-          <MdMenuBook />
-        </div>
-        <Link href='/carta'>
-          Ver Carta
+      <h1>La Auténtica Pizzería en Valencia</h1>
+      <div className='btnsWrpr'>
+
+        <Link href='/carta' passHref>
+          <ButtonLrg>
+          <div className='icnWrpr'>
+            <MdMenuBook />
+          </div>
+            Ver Carta
+          </ButtonLrg>
         </Link>
-      </ButtonLrg>
-      <ButtonLrg >
-        <div className='icnWrpr'>
-          <Image src={pizzabox} alt='pizza box icon'/>
-        </div>
-        <Link href='/hacer-pedido'>
-          Hacer Pedido
-        </Link>
-      </ButtonLrg>
+
+        <Link href='/hacer-pedido' passHref>
+          <ButtonLrg >
+            <div className='icnWrpr'>
+              <Image src={pizzabox} alt='pizza box icon'/>
+            </div>
+              Hacer Pedido
+          </ButtonLrg>
+          </Link>
+      </div>
+      
     </HeroSection>
   )
 }
