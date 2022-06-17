@@ -14,6 +14,10 @@ const GlobalStyles = createGlobalStyle`
   main {
     padding-top: 4em;
   };
+
+  section {
+    margin: auto;
+  }
   
   html, body {
     font-family: "Roboto", sans-serif;

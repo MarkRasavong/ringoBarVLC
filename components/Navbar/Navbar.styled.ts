@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const NavbarContainer = styled.nav`
 	position: fixed;
 	display: flex;
+	z-index: 1;
 	background-color: ${({ theme }) => theme.color.ringoRed};
 	width: 100%;
 	height: 4em;
