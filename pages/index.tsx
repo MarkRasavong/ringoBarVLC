@@ -5,7 +5,7 @@ import React from 'react';
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div >
         {/* IMPLEMENT SECTION PADDING FOR ALL */}
         <Hero />
         {/* Hours */}
