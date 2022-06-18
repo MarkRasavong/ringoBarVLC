@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
-import { HorariosGrid, HorariosSection } from './Horarios.styled';
+import { RedSection } from '../Sections/Sections.styled';
+import { HorariosGrid } from './Horarios.styled';
 
 const defaultHours = [
   { day: 'Lunes', hora: '10:30 - 23:00' },
@@ -13,7 +14,7 @@ const defaultHours = [
 
 const Horarios = () => {
   return (
-    <HorariosSection id='horarios'>
+    <RedSection id='horarios'>
       <h3>Horarios</h3>
       <HorariosGrid>
         {
@@ -29,7 +30,7 @@ const Horarios = () => {
           ))
         }
       </HorariosGrid>
-    </HorariosSection>
+    </RedSection>
   )
 }
 
