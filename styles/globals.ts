@@ -10,13 +10,9 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     list-style: none;
   };
-
-  main {
-    padding-top: 4em;
-  };
-
   section {
     margin: auto;
+    padding: 4em;
   }
   
   html, body {

@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
-import Hero from '../components/Hero/Hero';
+import Hero from '../components/HeroSection/Hero';
 import React from 'react';
+import Horarios from '../components/HorariosSection/Horarios';
 
 
 const Home: NextPage = () => {
@@ -9,6 +10,7 @@ const Home: NextPage = () => {
         {/* IMPLEMENT SECTION PADDING FOR ALL */}
         <Hero />
         {/* Hours */}
+        <Horarios />
         {/* GALERIA => INSTAGRAM/META API */}
         {/* Contact */}
     </div>

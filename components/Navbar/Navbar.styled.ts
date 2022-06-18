@@ -13,7 +13,7 @@ export const NavbarContainer = styled.nav`
 	ul li {
 		display: inline-block;
 		line-height: 3.5em;
-		margin-left: 3.3em;
+		margin-left: 4em;
 		font-size: 1.2em;
 	}
 	/* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -73,7 +73,6 @@ export const NavLinks = styled.ul`
 	display: flex;
 	width: 100%;
 	margin: auto;
-	padding: auto;
 	align-items: center;
 	color: ${({ theme }) => theme.color.ringoWhite};
 

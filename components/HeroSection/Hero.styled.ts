@@ -5,8 +5,6 @@ export const HeroSection = styled.section`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: 2em;
-	margin-bottom: 2em;
 
 	h1 {
 		font-size: 2rem;
@@ -14,6 +12,7 @@ export const HeroSection = styled.section`
 	}
 
 	.heroImageWrpr {
+		margin-top: 2em;
 		width: 70%;
 		margin-bottom: 2em;
 	}
@@ -49,6 +48,7 @@ export const HeroSection = styled.section`
 			margin-right: 1em;
 		}
 		.heroImageWrpr {
+			width: 20%;
 			display: flex;
 			align-items: center;
 			justify-content: center;
