@@ -27,6 +27,10 @@ export const ContactGrid = styled.div`
 	@media (min-width: 901px) {
 		display: grid;
 		grid-template-columns: 50% 50%;
+
+		button {
+			width: 50%;
+		}
 	}
 `
 export const DirectionsDiv = styled.div`

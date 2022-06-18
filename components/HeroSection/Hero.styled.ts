@@ -19,7 +19,7 @@ export const HeroSection = styled.section`
 
 	.icnWrpr {
 		margin-top: 0.3em;
-		margin-right: 0.5em;
+		margin-right: 0.4em;
 	}
 
 	.btnsWrpr {
@@ -28,6 +28,11 @@ export const HeroSection = styled.section`
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+	}
+
+	button {
+		display: flex;
+		width: 100%;
 	}
 
 	@media (min-width: 901px) {
@@ -42,6 +47,10 @@ export const HeroSection = styled.section`
 			align-items: center;
 			justify-content: center;
 			flex-direction: row;
+		}
+
+		button {
+			width: 15%;
 		}
 
 		button:nth-child(1) {
