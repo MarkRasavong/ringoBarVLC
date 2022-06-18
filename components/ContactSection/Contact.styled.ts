@@ -26,8 +26,8 @@ export const ContactGrid = styled.div`
 
 	@media (min-width: 901px) {
 		display: grid;
-		grid-template-columns: 50% 50%;
-
+		grid-template-columns: 40% auto;
+		justify-content: center;
 		button {
 			width: 50%;
 		}

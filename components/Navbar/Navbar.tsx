@@ -50,6 +50,7 @@ const Navbar = () => {
       <NavLinks style={{ left: displayMobileMenu ? '0%' : '-100%' }}>
         {pages.map(({title, link}) => (
             <li
+            onClick={handleMobileClick}
             key={`NavLink_${title}`}>
               <Link href={link} passHref>
                 <a>{title}</a>

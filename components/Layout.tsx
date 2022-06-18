@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer/Footer';
 import MetaHeader from './MetaHeader';
 import Navbar from './Navbar/Navbar';
 
@@ -15,6 +16,7 @@ const Layout = ({ children }: LayoutProps) => {
                 {/*all Page components goes here*/}
                 {children}
             </main>
+            <Footer />
         </React.Fragment>
     )
 }

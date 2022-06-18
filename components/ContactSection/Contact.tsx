@@ -8,7 +8,7 @@ import { MdAssistantDirection, MdPhoneInTalk } from 'react-icons/md';
 
 const Contact = () => {
   return (
-    <RedSection id="contact">
+    <RedSection id="contactar">
       <h3>Contactar</h3>
       <MapImageContainer>
         <a href='https://www.google.com/maps/place/RINGO+BAR/@39.4845162,-0.3890558,17z/data=!3m1!4b1!4m5!3m4!1s0xd604f1cead0fce7:0xdf718751632a7a69!8m2!3d39.4845089!4d-0.3868619' target='_blank' rel="noreferrer">
