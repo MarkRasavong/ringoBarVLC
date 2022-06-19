@@ -15,5 +15,6 @@ export const FooterDiv = styled.footer`
 		color: ${({ theme }) => theme.color.ringoWhite};
 		margin: 0;
 		font-weight: normal;
+		cursor: pointer;
 	}
 `

@@ -39,7 +39,7 @@ const Navbar = () => {
   ]
 
   const handleMobileClick = () => {
-    setDisplayMobileMenu(!displayMobileMenu);
+    setDisplayMobileMenu(prevState => !prevState);
   };
 
 
