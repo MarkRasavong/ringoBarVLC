@@ -1,49 +1,62 @@
-import React, { Fragment } from 'react'
+import React, { useState } from 'react'
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
-import { AccordionContainer, AccordionContent, AccordionItem, AccordionTitle, ArrowControls } from './Accordion.styled'
+import { MenuItems } from '../../pages/carta';
+import { AccordionContent, AccordionContentDescription, AccordionContentTitle, AccordionItem, AccordionTitle, ArrowControls } from './Accordion.styled';
 
-const Accordion = () => {
+interface AccordionCardProps {
+  categoryTitle: string;
+  data: MenuItems[]
+}
 
-  const toggleButtons = () => (
-    <Fragment>
-      <ArrowControls>
-        <span className='arrowUp'>
-          <MdKeyboardArrowUp />
-        </span>
-        <span className='arrowDown'>
-          <MdKeyboardArrowDown/>
-        </span>
-      </ArrowControls>
-    </Fragment>
-  )
+
+const AccordionCard = ({categoryTitle, data}: AccordionCardProps) => {
+  const [active, setActive] = useState(false);
+
+  const toggleAccordion = () => {
+    setActive(prevState => !prevState);
+  }
 
   return (
-    <div>
-      <AccordionContainer>
+      <AccordionItem id={`${categoryTitle}`} onClick={toggleAccordion} className={`${active}`}>
+        <AccordionTitle className='accordionTitle' href={`#${categoryTitle}`}>
+          {categoryTitle}
+          <ArrowControls>
+            {active ? <MdKeyboardArrowDown/> : <MdKeyboardArrowUp />}
+          </ArrowControls>
+        </AccordionTitle>
 
-        <AccordionItem id='CAT1'>
-          <AccordionTitle className='accordionTitle' href='#CAT1'>
-            MENU CAT
-            {toggleButtons()}
-          </AccordionTitle>
-          <AccordionContent className='toReveal'>
-            <p>anima sana incopore sano</p>
+        {data?.map(({name, description, price}) => (
+          <AccordionContent
+          key={`${categoryTitle}_${name}`} 
+          style={{ maxHeight: active ? '9em' : '0' }}
+          >
+            <AccordionContentTitle>
+              <span className='contentItemName'>
+                <h3>{name}</h3>
+              </span>
+              <span className='contentPrice'>
+                <h3>{price}</h3>
+              </span>
+            </AccordionContentTitle>
+            <AccordionContentDescription>
+              <p>
+                {description}
+              </p>
+            </AccordionContentDescription>
           </AccordionContent>
-        </AccordionItem>
+        ))}
 
-        <AccordionItem id='CAT2'>
-          <AccordionTitle className='accordionTitle' href='#CAT2'>
-            MENU CAT
-            {toggleButtons()}
-          </AccordionTitle>
-          <AccordionContent className='toReveal'>
-            <p>anima sana incopore sano</p>
-          </AccordionContent>
-        </AccordionItem>
-
-      </AccordionContainer>
-    </div>
+      </AccordionItem>
   )
 }
 
-export default Accordion
+AccordionCard.defaultProps = {
+  categoryTitle: 'Category Name',
+  data: {
+  name: 'Menu Item Name',
+  price: 10,
+  description: 'Place Description Here',
+  }
+}
+
+export default AccordionCard;
