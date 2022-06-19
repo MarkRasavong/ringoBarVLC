@@ -7,7 +7,7 @@ import Contact from '../components/ContactSection/Contact';
 
 const Home: NextPage = () => {
   return (
-    <div >
+    <>
         {/* IMPLEMENT SECTION PADDING FOR ALL */}
         <Hero />
         {/* Hours */}
@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         </section>
         {/* Contact */}
         <Contact />
-    </div>
+    </>
   )
 }
 

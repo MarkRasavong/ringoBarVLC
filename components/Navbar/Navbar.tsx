@@ -10,7 +10,8 @@ const pages = [
   { title: 'Carta', link: '/carta'  },
   { title: 'Galería', link: '/#galeria' },
   { title: 'Horarios', link: '/#horarios' },
-  { title: 'Contactar', link: '/#contactar' }
+  { title: 'Contactar', link: '/#contactar' },
+  { title: 'Hacer Pedido', link: '/hacer-pedido' },
 ];
 
 const Navbar = () => {
