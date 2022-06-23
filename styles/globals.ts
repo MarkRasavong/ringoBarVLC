@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
     list-style: none;
   };
   
+
   section {
     margin: auto;
     padding: 4em;

@@ -1,11 +1,10 @@
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, {useState } from 'react';
 import { MobileMenuButton, NavbarContainer, NavbarLogo, NavLinks, SocialMobileNavLinks, SocialNavLinks } from './Navbar.styled';
 import { BsInstagram } from 'react-icons/bs';
 import{ MdMenu, MdOutlineFacebook, MdPhoneInTalk, MdOutlineClose } from 'react-icons/md'
 import { useTheme } from 'styled-components';
 import { StyledRingoTheme } from '../../styles/theme';
-import { useRouter } from 'next/router';
 
 const pages = [
   { title: 'Carta', link: '/carta'  },
@@ -18,8 +17,6 @@ const pages = [
 const Navbar = () => {
   const [ displayMobileMenu, setDisplayMobileMenu ] = useState(false);
   const theme = useTheme() as StyledRingoTheme;
-  const router = useRouter();
-  const atIdxPg = router.pathname === '/';
 
   console.log("render navbar");
   
@@ -45,13 +42,8 @@ const Navbar = () => {
     setDisplayMobileMenu(prevState => !prevState);
   };
 
-
   return (
-    <NavbarContainer style={{
-      backgroundColor: atIdxPg ? 'transparent' : 'red',
-      boxShadow: atIdxPg ? 'none' : `rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
-      rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px`
-    }}>
+    <NavbarContainer>
       <NavbarLogo>
       <Link href={"/"}>RingoBar</Link>
       </NavbarLogo>

@@ -4,9 +4,9 @@ export const NavbarContainer = styled.nav`
 	position: fixed;
 	display: flex;
 	z-index: 93;
-	background-color: ${({ theme }) => theme.color.ringoRed};
 	width: 100%;
 	height: 4em;
+	background-color: ${({ theme }) => theme.color.ringoRed};
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
 		rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
 
@@ -16,6 +16,7 @@ export const NavbarContainer = styled.nav`
 		margin-left: 4em;
 		font-size: 1.2em;
 	}
+
 	/* Extra large devices (large laptops and desktops, 1200px and up) */
 	@media (min-width: 901px) {
 		margin: auto;
