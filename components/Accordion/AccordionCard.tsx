@@ -14,10 +14,10 @@ const AccordionCard = ({categoryTitle, data}: AccordionCardProps) => {
 
   const toggleAccordion = () => {
     setActive(prevState => !prevState);
-  }
+  };
 
   return (
-      <AccordionItem id={`${categoryTitle}`} onClick={toggleAccordion} className={`${active}`}>
+      <AccordionItem id={`${categoryTitle}`} onClick={toggleAccordion}>
         <AccordionTitle className='accordionTitle' href={`#${categoryTitle}`}>
           {categoryTitle}
           <ArrowControls>

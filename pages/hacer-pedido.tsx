@@ -3,13 +3,6 @@ import React from 'react'
 import { MdPhoneInTalk } from 'react-icons/md';
 import { ButtonLrg } from '../components/Button/Button.styled';
 import { ColorOverlay, OrderContainer} from '../components/OrderPage/Order.styled';
-//import background from '../public/pexels-koolshooters-7142953.jpg';
-/*
-.buttonSticker {
-		height: 40px;
-		margin: 2px;
-	}
-*/
 
 const Order:NextPage = () => {
   return (

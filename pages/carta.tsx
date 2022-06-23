@@ -1,8 +1,8 @@
 import React from 'react'
-import AccordionCard from '../components/Accordion/Accordion';
+import AccordionCard from '../components/Accordion/AccordionCard';
 import { AccordionContainer } from '../components/Accordion/Accordion.styled';
-import { MenuContainer } from '../components/CartaPage/Carta';
-import { pizzas, desayunos, almuerzos, cervezas, bebidasExtras, vinos, cocteles, bocadillos, dolci, pastasApretivosYmas, promos } from '../components/CartaPage/cartaData';
+import { MenuContainer } from '../components/Carta/Carta';
+import { pizzas, desayunos, almuerzos, cervezas, bebidasExtras, vinos, cocteles, bocadillos, dolci, pastasApretivosYmas, promos } from '../components/Carta/cartaData';
 
 export interface MenuItems{
   number?: number;

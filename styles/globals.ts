@@ -10,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     list-style: none;
   };
+  
   section {
     margin: auto;
     padding: 4em;
