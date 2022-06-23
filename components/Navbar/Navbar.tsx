@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, {useState } from 'react';
 import { MobileMenuButton, NavbarContainer, NavbarLogo, NavLinks, SocialMobileNavLinks, SocialNavLinks } from './Navbar.styled';
 import { BsInstagram } from 'react-icons/bs';
 import{ MdMenu, MdOutlineFacebook, MdPhoneInTalk, MdOutlineClose } from 'react-icons/md'
@@ -41,7 +41,6 @@ const Navbar = () => {
   const handleMobileClick = () => {
     setDisplayMobileMenu(prevState => !prevState);
   };
-
 
   return (
     <NavbarContainer>

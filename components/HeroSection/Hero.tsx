@@ -3,13 +3,14 @@ import Link from 'next/link';
 import React from 'react';
 import ringoBarLogo from '../../public/crop-logo-rm-bg.png'
 import { ButtonLrg } from '../Button/Button.styled';
-import { HeroSection } from './Hero.styled';
+import { GlassBox, HeroSection } from './Hero.styled';
 import pizzabox from '../../public/icon-pizza-box.svg'
 import { MdMenuBook } from 'react-icons/md';
 
 const Hero = () => {
   return (
     <HeroSection id="hero">
+      <GlassBox>
       <div className='heroImageWrpr'>
         <Image src={ringoBarLogo} alt='Ringo Bar Logo in Valencia'/>
       </div>
@@ -35,6 +36,10 @@ const Hero = () => {
           </Link>
       </div>
       
+      </GlassBox>
+      <div className="heroVideoBkg">
+        <video loop={true} autoPlay={true} muted={true} playsInline src='/pexels-denys-gromov-6176588.mp4' />
+      </div>
     </HeroSection>
   )
 }

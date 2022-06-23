@@ -5,7 +5,7 @@ export const OrderContainer = styled.div`
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: ${({ theme }) => theme.color.ringoWhite};
-	height: 85vh;
+	height: 86vh;
 	width: 100%;
 	position: relative;
 	display: flex;
@@ -36,7 +36,7 @@ export const OrderContainer = styled.div`
 export const ColorOverlay = styled.div`
 	margin-top: -4em;
 	width: 100%;
-	height: 93vh;
+	height: 100vh;
 	background: #000;
 	opacity: 0.7;
 	position: absolute;

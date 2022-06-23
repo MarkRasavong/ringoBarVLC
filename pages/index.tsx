@@ -6,6 +6,7 @@ import Contact from '../components/ContactSection/Contact';
 
 
 const Home: NextPage = () => {
+
   return (
     <>
         {/* IMPLEMENT SECTION PADDING FOR ALL */}
@@ -17,7 +18,7 @@ const Home: NextPage = () => {
 
         </section>
         {/* Contact */}
-        <Contact />
+        <Contact />      
     </>
   )
 }
