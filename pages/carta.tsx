@@ -10,6 +10,7 @@ export interface MenuItems{
   price?: string;
   description?: string;
 }
+
 const carta = () => {
   return (
     <MenuContainer>

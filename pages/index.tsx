@@ -4,7 +4,6 @@ import React from 'react';
 import Horarios from '../components/HorariosSection/Horarios';
 import Contact from '../components/ContactSection/Contact';
 
-
 const Home: NextPage = () => {
 
   return (
