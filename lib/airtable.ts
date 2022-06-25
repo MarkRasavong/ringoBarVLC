@@ -9,23 +9,5 @@ export const tableData = async (tableName: string) => {
 		({ fields, id }) => ({ id, ...fields })
 	)
 
-	if (res) {
-		localStorage.setItem(tableName, JSON.stringify(res))
-		console.log(res)
-	} else {
-		alert('retriving data failed')
-	}
+	return res
 }
-
-/*
-'bocadillos'
-'dulces'
-'cervezas'
-'vinos'
-'cócteles'
-'bebidasXtras'
-'desayunos'
-'almuerzos'
-'pastas y mas'
-'promos'
-*/

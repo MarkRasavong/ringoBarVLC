@@ -25,9 +25,9 @@ const AccordionCard = ({categoryTitle, data}: AccordionCardProps) => {
           </ArrowControls>
         </AccordionTitle>
 
-        {data?.map(({name, description, price}) => (
+        {data?.map(({name, description, price, id}) => (
           <AccordionContent
-          key={`${categoryTitle}_${name}`} 
+          key={id} 
           style={{ maxHeight: active ? '9em' : '0' }}
           >
             <AccordionContentTitle>

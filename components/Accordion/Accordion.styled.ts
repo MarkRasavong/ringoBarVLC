@@ -47,7 +47,7 @@ export const AccordionContent = styled.div`
 
 	p {
 		color: rgba(255, 255, 255, 0.8);
-		font-size: 1em;
+		font-size: 1.2em;
 		padding: 2em;
 	}
 `
@@ -62,7 +62,7 @@ export const AccordionContentTitle = styled.div`
 	display: flex;
 	justify-content: space-between;
 	h3 {
-		font-size: 1.2em;
+		font-size: 1.6em;
 	}
 `
 

@@ -2,34 +2,54 @@ import React from 'react'
 import AccordionCard from '../components/Accordion/AccordionCard';
 import { AccordionContainer } from '../components/Accordion/Accordion.styled';
 import { MenuContainer } from '../components/Carta/Carta';
-import { pizzas, desayunos, almuerzos, cervezas, bebidasExtras, vinos, cocteles, bocadillos, dolci, pastasApretivosYmas, promos } from '../components/Carta/cartaData';
+import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import { tableData } from '../lib/airtable';
 
 export interface MenuItems{
-  number?: number;
-  name?: string;
+  catName: string;
+  id: number;
+  name: string;
   price?: string;
   description?: string;
 }
 
-const carta = () => {
+export interface ApiMenuItems {
+  title: string;
+  data: MenuItems[]
+}
+
+const carta = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const {menuItems} = props
   return (
     <MenuContainer>
       <h1>Ringo Carta</h1>
       <AccordionContainer>
-        <AccordionCard categoryTitle='pizzas' data={pizzas} key='carta_pizzas'/>
-        <AccordionCard categoryTitle='pastas, apretivos, y mas' data={pastasApretivosYmas} key='carta_pastasApretivosYmas'/>
-        <AccordionCard categoryTitle='bocadillos' data={bocadillos} key='carta_bocadillos'/>
-        <AccordionCard categoryTitle='cervezas' data={cervezas} key='carta_cervezas'/> 
-        <AccordionCard categoryTitle='vinos' data={vinos} key='carta_vinos'/> 
-        <AccordionCard categoryTitle='cocteles' data={cocteles} key='carta_cocteles'/> 
-        <AccordionCard categoryTitle='bebidas' data={bebidasExtras} key='carta_bebidasExtras'/>
-        <AccordionCard categoryTitle='dulces' data={dolci} key='carta_dolci'/> 
-        <AccordionCard categoryTitle='desayunos' data={desayunos} key='carta_desayunos'/>
-        <AccordionCard categoryTitle='almuerzos' data={almuerzos} key='carta_almuerzos'/> 
-        <AccordionCard categoryTitle='promos' data={promos} key='carta_promos'/> 
+          {
+          menuItems.map(({title, data}: ApiMenuItems) => <AccordionCard categoryTitle={title} data={data} key={`carta_${title}`}/> )
+          }
       </AccordionContainer>
     </MenuContainer>
   )
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const pizzas = {title: 'pizzas', data: await tableData('pizzas')};
+  const bocadillos = {title:'bocadillos', data: await tableData('bocadillos')};
+  const dulces = {title:'dulces', data: await tableData('dulces')};
+  const cervezas = {title:'cervezas', data: await tableData('cervezas')};
+  const vinos = {title:'vinos', data: await tableData('vinos')};
+  const cocteles = {title:'cócteles', data: await tableData('cócteles')};
+  const bebidas = {title:'más bebidas', data: await tableData('más bebidas')};
+  const desayunos = {title:'desayunos', data: await tableData('desayunos')};
+  const almuerzos = {title:'almuerzos', data: await tableData('almuerzos')};
+  const pastaYMas = {title:'pastas y más', data: await tableData('pastas y más')};
+  const promos = {title:'promos', data: await tableData('promos')};
+
+  return {
+    props: {
+      menuItems: [pizzas, bocadillos, dulces, cervezas, vinos, cocteles, bebidas, desayunos, almuerzos, pastaYMas, promos]
+    }
+  }
 }
 
-export default carta
+export default carta;
