@@ -29,7 +29,7 @@ const Contact = () => {
         </LlamarDiv>
         <DirectionsDiv>
           <h5>Dirección</h5>
-          <ButtonLrg>
+          <ButtonLrg className='llegar'>
               <a href='https://www.google.com/maps/dir//RINGO+BAR/@39.4844952,-0.4569071,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd604f1cead0fce7:0xdf718751632a7a69!2m2!1d-0.3868619!2d39.4845089' target='_blank' rel="noreferrer">
                 <MdAssistantDirection style={{ marginRight: '0.5em'}} size='1em'/>
                 Cómo Llegar

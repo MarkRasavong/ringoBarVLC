@@ -28,7 +28,7 @@ const AccordionCard = ({categoryTitle, data}: AccordionCardProps) => {
         {data?.map(({name, description, price, id}) => (
           <AccordionContent
           key={id} 
-          style={{ maxHeight: active ? '9em' : '0' }}
+          style={{ maxHeight: active ? '12em' : '0' }}
           >
             <AccordionContentTitle>
               <span className='contentItemName'>

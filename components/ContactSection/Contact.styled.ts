@@ -31,6 +31,10 @@ export const ContactGrid = styled.div`
 		button {
 			width: 50%;
 		}
+
+		.llegar {
+			width: 100%;
+		}
 	}
 `
 export const DirectionsDiv = styled.div`

@@ -33,6 +33,7 @@ const carta = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
+  
   const pizzas = {title: 'pizzas', data: await tableData('pizzas')};
   const bocadillos = {title:'bocadillos', data: await tableData('bocadillos')};
   const dulces = {title:'dulces', data: await tableData('dulces')};

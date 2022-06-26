@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ringo Bar
 
-## Getting Started
+A local pizzeria in Valencia made with Next.js.
 
-First, run the development server:
+**Link to project:** https://ringo-bar.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+![alt tag](./ringo_bar.gif)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How It's Made:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+**Tech used:** HTML, CSS, JavaScript with Typescript, Next.js, Styled-Components, Cypress (intergration tests)
+**APIs used:** Airtable, Instagram(Meta)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Optimizations
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Could of use the Next.js Image Component instead of the standard html img tag for some images such as the instagram gallery photos being displayed. The Next.js Image component can help with minification of the file size thus improving the performance of the image depending on device the user is using and the data speed of their provider. Intergrate Glovo and Just Eat API to make ordering within the site.
 
-## Learn More
+## Lessons Learned:
 
-To learn more about Next.js, take a look at the following resources:
+👩‍💻 Updated brouchered project to the original Ringo Bar. https://github.com/MarkRasavong/ringoBar
+✅ Had to deploy a live demo to client. Started working with git/github pull requests, branching, etc.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Where to find more:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**Personal Website:** https://markrasavong.com/
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**My Github Repository:** https://github.com/markRasavong?tab=repositories

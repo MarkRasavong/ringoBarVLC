@@ -24,12 +24,12 @@ const Navbar = () => {
     {
       key: 'ringoBarPhone',
       icon: <MdPhoneInTalk color={theme.color.ringoWhite} size={'1.6em'}/>,
-      link: 'tel:+34-343-434-343',
+      link: 'tel:+34-624-41-45-18',
     },
     {
       key: 'ringoBarFacebook',
       icon: <MdOutlineFacebook color={theme.color.ringoWhite} size={'1.6em'}/>,
-      link: 'https://facebook.com/',
+      link: 'https://www.facebook.com/Ringo-Bar-pizzer%C3%ADa-103392548818653/?ref=page_internal',
     },
     {
       key: 'ringoBarInstagram',

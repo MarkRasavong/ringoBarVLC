@@ -84,7 +84,7 @@ export const GlassBox = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 1em;
+	padding: 0 1em;
 
 	background: rgba(255, 255, 255, 0.4);
 	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);

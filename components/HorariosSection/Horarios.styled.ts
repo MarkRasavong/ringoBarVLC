@@ -6,7 +6,7 @@ export const HorariosGrid = styled.div`
 	grid-row-gap: 0.6em;
 	justify-content: center;
 	align-items: center;
-	margin-top: 1em;
+	padding-top: 2em;
 	margin-left: 15%;
 
 	p {
@@ -16,5 +16,6 @@ export const HorariosGrid = styled.div`
 	@media (min-width: 901px) {
 		justify-content: center;
 		margin-left: 20%;
+		padding-bottom: 4em;
 	}
 `

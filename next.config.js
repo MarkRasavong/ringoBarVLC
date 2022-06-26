@@ -4,5 +4,8 @@ const nextConfig = {
 }
 
 module.exports = {
+  images: {
+    domains: ['scontent-akl1-1.cdninstagram.com'],
+  },
   nextConfig
 }
