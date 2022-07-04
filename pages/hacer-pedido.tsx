@@ -2,10 +2,13 @@ import { NextPage } from 'next';
 import React from 'react'
 import { MdPhoneInTalk } from 'react-icons/md';
 import { ButtonLrg } from '../components/Button/Button.styled';
+import MetaHeader from '../components/MetaHeader';
 import { ColorOverlay, OrderContainer} from '../components/OrderPage/Order.styled';
 
 const Order:NextPage = () => {
   return (
+    <>
+    <MetaHeader title='Hacer Pedido - Ringo Bar VLC' description='Opciones para hacer a domicillo'/>
     <OrderContainer>
       <ColorOverlay />
       <div className='btnContainer'>
@@ -33,6 +36,7 @@ const Order:NextPage = () => {
 
       </div>
     </OrderContainer>
+    </>
   )
 }
 
