@@ -72,7 +72,7 @@ const Home: NextPage = (props: InferGetStaticPropsType<typeof getStaticProps>) =
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTA_MARK_TOKEN}`;
+  const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTA_RINGO_TOKEN}`;
   const fetchData = await fetch(url);
   const data  = await fetchData.json();
   const horas = await tableData('hours');

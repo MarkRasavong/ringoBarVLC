@@ -17,8 +17,6 @@ const pages = [
 const Navbar = () => {
   const [ displayMobileMenu, setDisplayMobileMenu ] = useState(false);
   const theme = useTheme() as StyledRingoTheme;
-
-  console.log("render navbar");
   
   const socialMedia = [
     {
