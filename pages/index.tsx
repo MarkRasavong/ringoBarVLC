@@ -37,8 +37,6 @@ const Home: NextPage = (
 		.slice(0, 9)
 	const horarios: HorariosInterface[] = props.horarios
 
-	console.log(imagins)
-
 	return (
 		<>
 			{/* IMPLEMENT SECTION PADDING FOR ALL */}
