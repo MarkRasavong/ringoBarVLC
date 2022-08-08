@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <GlobalStyles />
     <ThemeProvider theme={theme}>
       <Layout>
-      <Component {...pageProps} />
+        <Component {...pageProps} />
       </Layout>
     </ThemeProvider>
   </Fragment>

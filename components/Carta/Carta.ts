@@ -11,3 +11,9 @@ export const MenuContainer = styled.div`
 		color: ${({ theme }) => theme.color.ringoRed};
 	}
 `
+
+export const SubtitleCartaText = styled.div`
+	text-align: center;
+	font-weight: 500;
+	font-family: ${({ theme }) => theme.fonts[2]};
+`
