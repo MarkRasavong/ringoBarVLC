@@ -94,6 +94,6 @@ export const GlassBox = styled.div`
 	border: 1px solid rgba(255, 255, 255, 0.18);
 
 	@media (min-width: 901px) {
-		padding: 3em;
+		padding: 2em;
 	}
 `
