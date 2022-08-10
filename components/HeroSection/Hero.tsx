@@ -14,7 +14,7 @@ const Hero = () => {
 				<div className="heroImageWrpr">
 					<Image src={ringoBarLogo} alt="Ringo Bar Logo in Valencia" />
 				</div>
-				<h1>La Auténtica Pizzería en Valencia</h1>
+				<h1>La Auténtica Pizzería Italiana en Valencia</h1>
 				<div className="btnsWrpr">
 					<Link href="/carta" passHref>
 						<ButtonLrg>
