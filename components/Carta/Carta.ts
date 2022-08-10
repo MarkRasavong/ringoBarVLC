@@ -15,5 +15,10 @@ export const MenuContainer = styled.div`
 export const SubtitleCartaText = styled.div`
 	text-align: center;
 	font-weight: 500;
+	font-size: 3em;
 	font-family: ${({ theme }) => theme.fonts[2]};
+
+	@media (max-width: 990px) {
+		font-size: 2em;
+	}
 `
