@@ -1,4 +1,5 @@
-import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
+import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
+import Image from 'next/image'
 import Hero from '../components/HeroSection/Hero'
 import React, { Fragment } from 'react'
 import Contact from '../components/ContactSection/Contact'
@@ -30,7 +31,7 @@ const Home: NextPage = (
 	props: InferGetStaticPropsType<typeof getStaticProps>
 ) => {
 	const imagins: InstaInterface[] = props.instadata.data
-		.filter(
+		?.filter(
 			(img: { media_type: string }) =>
 				img.media_type === 'IMAGE' || img.media_type === 'CAROUSEL_ALBUM'
 		)
@@ -59,24 +60,25 @@ const Home: NextPage = (
 						))}
 				</HorariosGrid>
 			</RedSection>
-			{/* GALERIA => INSTAGRAM/META API */}
-			<GaleriaSection id="galeria">
-				<h1>Galería</h1>
-				<GaleriaGridWrpr>
-					{imagins &&
-						imagins.map((imagin) => (
-							<div key={imagin.id}>
-								<a
-									href={imagin.permalink}
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<img src={imagin.media_url} alt={imagin.caption} />
-								</a>
-							</div>
-						))}
-				</GaleriaGridWrpr>
-			</GaleriaSection>
+			{props.imgains && (
+				<GaleriaSection id="galeria">
+					<h1>Galería</h1>
+					<GaleriaGridWrpr>
+						{imagins &&
+							imagins.map((imagin) => (
+								<div key={imagin.id}>
+									<a
+										href={imagin.permalink}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<Image src={imagin.media_url} alt={imagin.caption} />
+									</a>
+								</div>
+							))}
+					</GaleriaGridWrpr>
+				</GaleriaSection>
+			)}
 			{/* Contact */}
 			<Contact />
 		</>
