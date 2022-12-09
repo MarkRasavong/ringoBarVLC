@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const OrderContainer = styled.div`
-	background: #000 url(/pexels-koolshooters-7142953.jpg);
+	background: #000 url(/pexels-koolshooters-7142953.webp);
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: ${({ theme }) => theme.color.ringoWhite};

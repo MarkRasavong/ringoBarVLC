@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import ringoBarLogo from '../../public/pizzeria_ringo.png'
+import ringoBarLogo from '../../public/pizzeria_ringo.webp'
 import { ButtonLrg } from '../Button/Button.styled'
 import { GlassBox, HeroSection } from './Hero.styled'
 import pizzabox from '../../public/icon-pizza-box.svg'
