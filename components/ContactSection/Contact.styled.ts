@@ -1,8 +1,14 @@
 import styled from 'styled-components'
 
 export const MapImageContainer = styled.div`
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 
 	div {
@@ -13,7 +19,12 @@ export const MapImageContainer = styled.div`
 `
 
 export const ContactGrid = styled.div`
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 
 	button {
@@ -25,8 +36,12 @@ export const ContactGrid = styled.div`
 	}
 
 	@media (min-width: 901px) {
+		display: -ms-grid;
 		display: grid;
+		-ms-grid-columns: 40% auto;
 		grid-template-columns: 40% auto;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
 		justify-content: center;
 		button {
 			width: 50%;
@@ -38,7 +53,12 @@ export const ContactGrid = styled.div`
 	}
 `
 export const DirectionsDiv = styled.div`
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 
 	h5 {
@@ -55,7 +75,12 @@ export const DirectionsDiv = styled.div`
 `
 
 export const LlamarDiv = styled.div`
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 
 	h5 {
