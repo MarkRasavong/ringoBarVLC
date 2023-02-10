@@ -8,7 +8,11 @@ export const OrderContainer = styled.div`
 	height: 86vh;
 	width: 100%;
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 
 	h1 {
@@ -23,7 +27,11 @@ export const OrderContainer = styled.div`
 
 	button {
 		width: 100%;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
 		justify-content: center;
 	}
 
