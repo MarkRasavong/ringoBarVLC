@@ -2,7 +2,11 @@ import styled from 'styled-components'
 
 export const HeroSection = styled.section`
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	height: 49em;
 
@@ -23,13 +27,28 @@ export const HeroSection = styled.section`
 
 	.btnsWrpr {
 		width: 100%;
+
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+
 		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+
 		justify-content: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
 	}
 
 	button {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		width: 100%;
 	}
@@ -45,6 +64,7 @@ export const HeroSection = styled.section`
 	.heroVideoBkg video {
 		width: 100%;
 		height: 54em;
+		-o-object-fit: cover;
 		object-fit: cover;
 		min-height: 550px;
 	}
@@ -54,12 +74,20 @@ export const HeroSection = styled.section`
 			font-size: 3rem;
 			color: ${({ theme }) => theme.color.ringoRed};
 		}
-
 		.btnsWrpr {
 			width: 100%;
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
 			align-items: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
 			justify-content: center;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: row;
 			flex-direction: row;
 		}
 
@@ -72,8 +100,14 @@ export const HeroSection = styled.section`
 		}
 		.heroImageWrpr {
 			width: 50%;
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
 			align-items: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
 			justify-content: center;
 		}
 	}
