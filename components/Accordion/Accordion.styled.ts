@@ -12,6 +12,7 @@ export const AccordionItem = styled.div`
 	border-radius: 0.4em;
 	margin-bottom: 1em;
 	padding: 1rem;
+	-webkit-box-shadow: 0.5em 2px 0.5em rgba(0, 0, 0, 0.1);
 	box-shadow: 0.5em 2px 0.5em rgba(0, 0, 0, 0.1);
 `
 
@@ -23,8 +24,16 @@ export const AccordionTitle = styled.a`
 	width: 100%;
 	text-transform: uppercase;
 
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	padding: 1em 0;
 `
@@ -34,6 +43,8 @@ export const AccordionContent = styled.div`
 	max-height: 0;
 	overflow: hidden;
 	position: relative;
+	-webkit-transition: max-height 650ms;
+	-o-transition: max-height 650ms;
 	transition: max-height 650ms;
 
 	::before {
@@ -42,6 +53,8 @@ export const AccordionContent = styled.div`
 		height: 90%;
 		top: 50%;
 		left: 0;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
 	}
 
@@ -59,7 +72,11 @@ export const ArrowControls = styled.div`
 
 export const AccordionContentTitle = styled.div`
 	color: ${({ theme }) => theme.color.ringoWhite};
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	h3 {
 		font-size: 1.6em;
@@ -67,7 +84,11 @@ export const AccordionContentTitle = styled.div`
 `
 
 export const AccordionContentDescription = styled.div`
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
 	justify-content: flex-start;
 	margin-left: 1em;
 `
