@@ -4,7 +4,8 @@ const GlobalStyles = createGlobalStyle`
   *, 
   *::after, 
   *::before {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -17,9 +18,11 @@ const GlobalStyles = createGlobalStyle`
     padding: 4em;
   }
 
-main {
+  main {
   margin-top: 4em;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
   
   html, body {
@@ -29,8 +32,13 @@ main {
   };
 
   body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   h1, h2, h3, h4, h5, h6 {
