@@ -2,11 +2,15 @@ import styled from 'styled-components'
 
 export const NavbarContainer = styled.nav`
 	position: fixed;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	z-index: 93;
 	width: 100%;
 	height: 4em;
 	background-color: ${({ theme }) => theme.color.ringoRed};
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
+		rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
 		rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
 
@@ -25,6 +29,9 @@ export const NavbarContainer = styled.nav`
 	//tablet & mobile devices
 	@media (max-width: 990px) {
 		ul {
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
 			flex-direction: column;
 			position: fixed;
 			width: 100%;
@@ -33,6 +40,8 @@ export const NavbarContainer = styled.nav`
 			top: 4em;
 			left: -100%;
 			text-align: center;
+			-webkit-transition: all 0.5s;
+			-o-transition: all 0.5s;
 			transition: all 0.5s;
 		}
 
@@ -62,7 +71,11 @@ export const NavbarLogo = styled.label`
 
 	//tablet & mobile devices
 	@media (max-width: 990px) {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-flex: 1;
+		-ms-flex-positive: 1;
 		flex-grow: 1;
 	}
 
@@ -71,9 +84,13 @@ export const NavbarLogo = styled.label`
 	}
 `
 export const NavLinks = styled.ul`
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 100%;
 	margin: auto;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	color: ${({ theme }) => theme.color.ringoWhite};
 
@@ -93,13 +110,21 @@ export const NavLinks = styled.ul`
 
 	@media (min-width: 991px) {
 		width: auto;
+		-webkit-box-pack: space-evenly;
+		-ms-flex-pack: space-evenly;
 		justify-content: space-evenly;
 	}
 `
 
 export const SocialNavLinks = styled.div`
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 
 	button {
@@ -108,6 +133,8 @@ export const SocialNavLinks = styled.div`
 		border-radius: 100%;
 		padding: 0.8em;
 		cursor: pointer;
+		-webkit-transition-duration: 0.13s;
+		-o-transition-duration: 0.13s;
 		transition-duration: 0.13s;
 	}
 
@@ -129,7 +156,11 @@ export const MobileMenuButton = styled.button`
 	//mobile && tablets
 	@media (max-width: 990px) {
 		border: none;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-ms-flex-item-align: center;
+		-ms-grid-row-align: center;
 		align-self: center;
 		margin: auto 1em;
 		background-color: inherit;
@@ -140,6 +171,8 @@ export const SocialMobileNavLinks = styled.div`
 	display: none;
 	//mobile
 	@media (max-width: 990px) {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 
 		button {
@@ -149,6 +182,8 @@ export const SocialMobileNavLinks = styled.div`
 			padding: 0.8em;
 			cursor: pointer;
 			margin-right: 1rem;
+			-webkit-transition-duration: 0.13s;
+			-o-transition-duration: 0.13s;
 			transition-duration: 0.13s;
 		}
 
