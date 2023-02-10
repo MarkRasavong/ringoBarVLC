@@ -12,7 +12,9 @@ export const MenuContainer = styled.div`
 	-ms-flex-align: center;
 	align-items: center;
 	min-height: 41em;
+
 	h1 {
+		text-align: center;
 		font-size: 4rem;
 		margin-top: 1em;
 		color: ${({ theme }) => theme.color.ringoRed};
@@ -20,12 +22,13 @@ export const MenuContainer = styled.div`
 `
 
 export const SubtitleCartaText = styled.div`
+	width: 80%;
 	text-align: center;
 	font-weight: 500;
 	font-size: 3em;
 	font-family: ${({ theme }) => theme.fonts[2]};
 
 	@media (max-width: 990px) {
-		font-size: 2em;
+		font-size: 1.75em;
 	}
 `

@@ -30,12 +30,12 @@ const carta = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
 			<MenuContainer>
 				<h1>Ringo Carta</h1>
 				<SubtitleCartaText>
-					Pedidos para llevar, domicilio y reserva de mesas al 624414518
+					🚚 Pedidos para llevar, domicilio y reserva de mesas al 624414518
 					<br></br>
-					Glovo y Just Eat disponible - Horario de 19:00 a 23:00 (Los Martes
+					🍕 Glovo y Just Eat disponible - Horario de 19:00 a 23:00 (Los Martes
 					cerrado)
 					<br></br>
-					Síguenos en Instagram: ringobar_
+					📷 Síguenos en Instagram: ringobar_
 				</SubtitleCartaText>
 				<AccordionContainer>
 					{menuItems.map(({ title, data }: ApiMenuItems) => (

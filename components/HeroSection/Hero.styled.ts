@@ -8,7 +8,7 @@ export const HeroSection = styled.section`
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	height: 49em;
+	height: 40em;
 
 	h1 {
 		font-size: 1.6rem;
@@ -18,6 +18,16 @@ export const HeroSection = styled.section`
 	.heroImageWrpr {
 		width: 80%;
 		margin-bottom: 2em;
+
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
 	}
 
 	.icnWrpr {
@@ -71,7 +81,7 @@ export const HeroSection = styled.section`
 
 	@media (min-width: 901px) {
 		h1 {
-			font-size: 3rem;
+			font-size: 2rem;
 			color: ${({ theme }) => theme.color.ringoRed};
 		}
 		.btnsWrpr {
@@ -100,15 +110,6 @@ export const HeroSection = styled.section`
 		}
 		.heroImageWrpr {
 			width: 50%;
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-align: center;
-			-ms-flex-align: center;
-			align-items: center;
-			-webkit-box-pack: center;
-			-ms-flex-pack: center;
-			justify-content: center;
 		}
 	}
 `
