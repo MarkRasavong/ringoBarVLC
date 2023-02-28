@@ -20,7 +20,8 @@ export interface ApiMenuItems {
 }
 
 const carta = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
-	const { menuItems } = props
+	const { english, castellano } = props
+
 	return (
 		<>
 			<MetaHeader
@@ -38,11 +39,18 @@ const carta = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
 					📷 Síguenos en Instagram: ringobar_
 				</SubtitleCartaText>
 				<AccordionContainer>
-					{menuItems.map(({ title, data }: ApiMenuItems) => (
+					{castellano.map(({ title, data }: ApiMenuItems) => (
 						<AccordionCard
 							categoryTitle={title}
 							data={data}
-							key={`carta_${title}`}
+							key={`carta_ESP_${title}.${Math.random() * 100}`}
+						/>
+					))}
+					{english.map(({ title, data }: ApiMenuItems) => (
+						<AccordionCard
+							categoryTitle={title}
+							data={data}
+							key={`carta_ENG_${title}.${Math.random() * 100}`}
 						/>
 					))}
 				</AccordionContainer>
@@ -52,37 +60,58 @@ const carta = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-	const pizzas = { title: 'pizzas', data: await tableData('pizzas') }
-	const bocadillos = {
-		title: 'bocadillos',
-		data: await tableData('bocadillos'),
+	interface MenuItemFixEnglish {
+		[key: string]: string
 	}
-	const postres = { title: 'postres', data: await tableData('postres') }
-	const extras = { title: 'extras', data: await tableData('extras') }
-	const pastas = { title: 'pastas', data: await tableData('pastas') }
-	const paraCompartir = {
-		title: 'para compartir',
-		data: await tableData('para compartir'),
+
+	const castellanoData = await Promise.all(
+		[
+			'pizzas',
+			'bocadillos',
+			'postres',
+			'extras',
+			'pastas',
+			'para compartir',
+			'bebidas',
+			'desayunos',
+			'almuerzos',
+			'promos',
+		].map(async (menuItem) => ({
+			title: menuItem,
+			data: await tableData(menuItem),
+		}))
+	)
+	const castellano = castellanoData.map((menuItem) => ({
+		title: menuItem.title,
+		data: menuItem.data,
+	}))
+
+	const menuItemFixEnglish: MenuItemFixEnglish = {
+		ENG_pizzas: 'pizzas',
+		ENG_panini: 'italian sandwiches // panini',
+		ENG_Desserts: 'desserts & sweets',
+		ENG_extras: 'extra toppings',
+		ENG_drinks: 'drinks',
+		ENG_appetizers: 'appetizers',
+		ENG_specials: 'specials',
 	}
-	const bebidas = { title: 'bebidas', data: await tableData('bebidas') }
-	const desayunos = { title: 'desayunos', data: await tableData('desayunos') }
-	const almuerzos = { title: 'almuerzos', data: await tableData('almuerzos') }
-	const promos = { title: 'promos', data: await tableData('promos') }
+
+	const airtableEnglishMenu = await Promise.all(
+		Object.keys(menuItemFixEnglish).map(async (menuItem) => ({
+			title: menuItem,
+			data: await tableData(menuItem),
+		}))
+	)
+
+	const english = airtableEnglishMenu.map((menuItem) => ({
+		title: menuItemFixEnglish[menuItem.title],
+		data: menuItem.data,
+	}))
 
 	return {
 		props: {
-			menuItems: [
-				pizzas,
-				bocadillos,
-				pastas,
-				paraCompartir,
-				bebidas,
-				postres,
-				extras,
-				desayunos,
-				almuerzos,
-				promos,
-			],
+			castellano,
+			english,
 		},
 	}
 }
