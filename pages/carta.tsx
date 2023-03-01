@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AccordionCard from '../components/Accordion/AccordionCard'
 import { AccordionContainer } from '../components/Accordion/Accordion.styled'
-import { MenuContainer, SubtitleCartaText } from '../components/Carta/Carta'
+import {
+	LanguageSelectorContainer,
+	MenuContainer,
+	SubtitleCartaText,
+} from '../components/Carta/Carta'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { tableData } from '../lib/airtable'
 import MetaHeader from '../components/MetaHeader'
@@ -19,8 +23,15 @@ export interface ApiMenuItems {
 	data: MenuItems[]
 }
 
-const carta = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Carta = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
+	const [language, setLanguage] = useState('🇪🇸')
 	const { english, castellano } = props
+
+	const handleLanguageChange = (e: {
+		target: { value: React.SetStateAction<string> }
+	}) => {
+		setLanguage(e.target.value)
+	}
 
 	return (
 		<>
@@ -38,21 +49,42 @@ const carta = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
 					<br></br>
 					📷 Síguenos en Instagram: ringobar_
 				</SubtitleCartaText>
+				<LanguageSelectorContainer>
+					<label>
+						<input
+							type="radio"
+							value="🇪🇸"
+							checked={language === '🇪🇸'}
+							onChange={handleLanguageChange}
+						/>
+						🇪🇸 Castellano
+					</label>
+					<label>
+						<input
+							type="radio"
+							value="🇬🇧"
+							checked={language === '🇬🇧'}
+							onChange={handleLanguageChange}
+						/>
+						🇬🇧 English
+					</label>
+				</LanguageSelectorContainer>
 				<AccordionContainer>
-					{castellano.map(({ title, data }: ApiMenuItems) => (
-						<AccordionCard
-							categoryTitle={title}
-							data={data}
-							key={`carta_ESP_${title}.${Math.random() * 100}`}
-						/>
-					))}
-					{english.map(({ title, data }: ApiMenuItems) => (
-						<AccordionCard
-							categoryTitle={title}
-							data={data}
-							key={`carta_ENG_${title}.${Math.random() * 100}`}
-						/>
-					))}
+					{language === '🇪🇸'
+						? castellano.map(({ title, data }: ApiMenuItems) => (
+								<AccordionCard
+									categoryTitle={title}
+									data={data}
+									key={`carta_ESP_${title}.${Math.random() * 100}`}
+								/>
+						  ))
+						: english.map(({ title, data }: ApiMenuItems) => (
+								<AccordionCard
+									categoryTitle={title}
+									data={data}
+									key={`carta_ENG_${title}.${Math.random() * 100}`}
+								/>
+						  ))}
 				</AccordionContainer>
 			</MenuContainer>
 		</>
@@ -116,4 +148,4 @@ export const getStaticProps: GetStaticProps = async () => {
 	}
 }
 
-export default carta
+export default Carta
