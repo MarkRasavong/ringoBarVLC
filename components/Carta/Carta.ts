@@ -32,3 +32,31 @@ export const SubtitleCartaText = styled.div`
 		font-size: 1.75em;
 	}
 `
+
+export const LanguageSelectorContainer = styled.div`
+	ddisplay: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	width: 80%;
+	margin-top: 1rem;
+
+	@media (min-width: 1525px) {
+		justify-content: center;
+	}
+
+	label {
+		font-size: 1.5rem;
+
+		:nth-child(1) {
+			margin-right: 1.5rem;
+		}
+	}
+
+	input[type='radio'] {
+		transform: scale(1.5);
+		margin-right: 0.5rem;
+	}
+`
