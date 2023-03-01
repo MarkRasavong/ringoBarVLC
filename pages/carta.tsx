@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import AccordionCard from '../components/Accordion/AccordionCard'
 import { AccordionContainer } from '../components/Accordion/Accordion.styled'
 import {
+	CartaMenuDiv,
+	CartaPinchaBtn,
 	LanguageSelectorContainer,
 	MenuContainer,
 	SubtitleCartaText,
@@ -9,6 +11,7 @@ import {
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { tableData } from '../lib/airtable'
 import MetaHeader from '../components/MetaHeader'
+import Link from 'next/link'
 
 export interface MenuItems {
 	catName: string
@@ -41,11 +44,17 @@ const Carta = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
 			/>
 			<MenuContainer>
 				<h1>Ringo Carta</h1>
+				<CartaMenuDiv>
+					<CartaPinchaBtn>
+						<Link href={'https://www.ringopizzeria.com/#horarios'}>
+							⏲ Horarios - Pincha Aquí
+						</Link>
+					</CartaPinchaBtn>
+				</CartaMenuDiv>
 				<SubtitleCartaText>
 					🚚 Pedidos para llevar, domicilio y reserva de mesas al 624414518
 					<br></br>
-					🍕 Glovo y Just Eat disponible - Horario de 19:00 a 23:00 (Los Martes
-					cerrado)
+					🍕 Glovo y Just Eat disponible
 					<br></br>
 					📷 Síguenos en Instagram: ringobar_
 				</SubtitleCartaText>
