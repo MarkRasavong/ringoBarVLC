@@ -34,7 +34,7 @@ export const SubtitleCartaText = styled.div`
 `
 
 export const LanguageSelectorContainer = styled.div`
-	ddisplay: -webkit-box;
+	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: end;
@@ -59,4 +59,33 @@ export const LanguageSelectorContainer = styled.div`
 		transform: scale(1.5);
 		margin-right: 0.5rem;
 	}
+`
+export const CartaPinchaBtn = styled.button`
+	width: 80%;
+	margin-bottom: 1rem;
+	margin-left: 1rem;
+	padding: 0.5rem;
+
+	font-size: 1.5rem;
+
+	cursor: pointer;
+	background-color: ${({ theme }) => theme.color.ringoRed};
+	color: ${({ theme }) => theme.color.ringoWhite};
+	font-family: ${({ theme }) => theme.fonts[0]};
+
+	border: none;
+	-webkit-box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+		0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+	box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+		0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+	border-radius: 0.5rem;
+
+	:hover {
+		background-color: ${({ theme }) => theme.color.ringoRedHoverDark};
+	}
+`
+export const CartaMenuDiv = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `
