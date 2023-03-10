@@ -23,6 +23,10 @@ export const OrderContainer = styled.div`
 
 	div.btnContainer {
 		z-index: 1;
+		width: 90%;
+		h1 {
+			text-align: center;
+		}
 	}
 
 	button {

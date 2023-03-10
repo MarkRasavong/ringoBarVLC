@@ -8,12 +8,8 @@ export const AccordionContainer = styled.div`
 `
 
 export const AccordionItem = styled.div`
-	background-color: ${({ theme }) => theme.color.ringoRed};
-	border-radius: 0.4em;
 	margin-bottom: 1em;
 	padding: 1rem;
-	-webkit-box-shadow: 0.5em 2px 0.5em rgba(0, 0, 0, 0.1);
-	box-shadow: 0.5em 2px 0.5em rgba(0, 0, 0, 0.1);
 `
 
 export const AccordionTitle = styled.a`
