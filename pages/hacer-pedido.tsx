@@ -1,5 +1,4 @@
 import { NextPage } from 'next'
-import Link from 'next/link'
 import React from 'react'
 import { MdPhoneInTalk } from 'react-icons/md'
 import { ButtonLrg } from '../components/Button/Button.styled'
@@ -57,9 +56,9 @@ const Order: NextPage = () => {
 						</ButtonLrg>
 					</a>
 
-					<Link passHref href="/order">
+					<a href="/order">
 						<ButtonLrg>Pedir directamente en línea</ButtonLrg>
-					</Link>
+					</a>
 				</div>
 			</OrderContainer>
 		</>

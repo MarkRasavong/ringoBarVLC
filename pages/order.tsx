@@ -3,7 +3,7 @@ import React from 'react'
 
 const Order = () => {
 	return (
-		<div>
+		<div style={{ minHeight: '100vh' }}>
 			<Script
 				id="flipdish-script"
 				type="text/javascript"
@@ -16,7 +16,6 @@ const Order = () => {
 				data-full-screen-on-mobile="false"
 				data-offset="100"
 				data-restaurant="fd25971"
-				style={{ maxHeight: '500px' }}
 			></div>
 		</div>
 	)
