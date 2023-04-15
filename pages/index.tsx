@@ -1,12 +1,7 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
-import Image from 'next/image'
 import Hero from '../components/HeroSection/Hero'
 import React, { Fragment } from 'react'
 import Contact from '../components/ContactSection/Contact'
-import {
-	GaleriaGridWrpr,
-	GaleriaSection,
-} from '../components/GaleriaSection/Galeria.styled'
 import { tableData } from '../lib/airtable'
 import { HorariosGrid } from '../components/HorariosSection/Horarios.styled'
 import { RedSection } from '../components/Sections/Sections.styled'
@@ -18,24 +13,9 @@ interface HorariosInterface {
 	dia: string
 }
 
-interface InstaInterface {
-	id: string
-	caption?: string
-	media_type: string
-	media_url: string
-	timestamp: string
-	permalink: string
-}
-
 const Home: NextPage = (
 	props: InferGetStaticPropsType<typeof getStaticProps>
 ) => {
-	const imagins: InstaInterface[] = props.instadata.data
-		?.filter(
-			(img: { media_type: string }) =>
-				img.media_type === 'IMAGE' || img.media_type === 'CAROUSEL_ALBUM'
-		)
-		.slice(0, 9)
 	const horarios: HorariosInterface[] = props.horarios
 
 	return (
@@ -60,25 +40,6 @@ const Home: NextPage = (
 						))}
 				</HorariosGrid>
 			</RedSection>
-			{props.imgains && (
-				<GaleriaSection id="galeria">
-					<h1>Galería</h1>
-					<GaleriaGridWrpr>
-						{imagins &&
-							imagins.map((imagin) => (
-								<div key={imagin.id}>
-									<a
-										href={imagin.permalink}
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										<Image src={imagin.media_url} alt={imagin.caption} />
-									</a>
-								</div>
-							))}
-					</GaleriaGridWrpr>
-				</GaleriaSection>
-			)}
 			{/* Contact */}
 			<Contact />
 		</>
@@ -86,14 +47,10 @@ const Home: NextPage = (
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-	const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTA_RINGO_TOKEN}`
-	const fetchData = await fetch(url)
-	const data = await fetchData.json()
 	const horas = await tableData('hours')
 
 	return {
 		props: {
-			instadata: data,
 			horarios: horas,
 		},
 	}
