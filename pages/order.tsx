@@ -10,21 +10,18 @@ const Order = () => {
 		document.body.appendChild(script)
 
 		return () => {
-			// Cleanup: remove the script when the component is unmounted
 			document.body.removeChild(script)
 		}
 	}, [])
 
 	return (
-		<div style={{ minHeight: '88vh' }}>
-			<div
-				id="flipdish-menu"
-				data-initial-screen="menu"
-				data-full-screen-on-mobile="false"
-				data-offset="100"
-				data-restaurant="fd25971"
-			></div>
-		</div>
+		<div
+			style={{ minHeight: '88vh' }}
+			id="flipdish-menu"
+			data-full-screen-on-mobile="false"
+			data-offset="100"
+			data-restaurant="fd25971"
+		></div>
 	)
 }
 
