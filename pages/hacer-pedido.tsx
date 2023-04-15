@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import { NextPage } from 'next'
 import Link from 'next/link'
 import React from 'react'
