@@ -1,9 +1,22 @@
-import Script from 'next/script'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Order = () => {
+	useEffect(() => {
+		const script = document.createElement('script')
+		script.src =
+			'https://web-order.flipdish.co/client/productionwlbuild/latest/static/js/main.js'
+		script.charset = 'UTF-8'
+		script.async = true
+		document.body.appendChild(script)
+
+		return () => {
+			// Cleanup: remove the script when the component is unmounted
+			document.body.removeChild(script)
+		}
+	}, [])
+
 	return (
-		<div style={{ minHeight: '100vh' }}>
+		<div style={{ minHeight: '88vh' }}>
 			<div
 				id="flipdish-menu"
 				data-initial-screen="menu"
@@ -11,12 +24,6 @@ const Order = () => {
 				data-offset="100"
 				data-restaurant="fd25971"
 			></div>
-			<Script
-				id="flipdish-script"
-				type="text/javascript"
-				charSet="UTF-8"
-				src="https://web-order.flipdish.co/client/productionwlbuild/latest/static/js/main.js"
-			></Script>
 		</div>
 	)
 }
